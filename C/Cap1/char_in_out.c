@@ -20,7 +20,7 @@ void charcount();
 void linecount();
 void ctncount();
 void rep1();
-void rep2();
+void rep2(); 
 void wcp();
 
 void ver2(){
