@@ -94,7 +94,4 @@ int main(){
     unsigned res3=invert(10,4,3);
     printf("%d\n", res3);
 
-
-
-
 }
