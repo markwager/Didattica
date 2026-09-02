@@ -3,10 +3,24 @@ Il do while permette di eseguire l'azione almeno una volta
 Quindi controlla la condizione while dopo, non prima
 */
 #include <stdio.h>
+#include <string.h>
 
 void itoa(int n, char s[]);
 void itoanew(int n, char s[]);
 void itob(int n, char s[], int b);
+
+void reverse(char s[])
+{
+    int c, i, j;
+    
+    // i parte da sinistra (0), j parte da destra (fine della stringa)
+    for (i = 0, j = strlen(s) - 1; i < j; i++, j--) {
+        // Scambio classico (swap) usando una variabile temporanea 'c'
+        c = s[i];
+        s[i] = s[j];
+        s[j] = c;
+    }
+}
 
 void itob(int n, char s[], int b){
     int i, sign, resto;
