@@ -8,6 +8,25 @@ Quindi controlla la condizione while dopo, non prima
 void itoa(int n, char s[]);
 void itoanew(int n, char s[]);
 void itob(int n, char s[], int b);
+void reverse(char s[]);
+void itoap(int n, char s[], int p);
+
+void itoap(int n, char s[], int p){
+    int i, sign, space;
+    if ((sign = n) < 0)  /* registra il segno */
+        n = -n;          /* rendi n positivo */
+    i = 0;
+    do {       /* genera le cifre in ordine inverso */
+        s[i++] = n % 10 + '0';   /* prendi la cifra successiva */
+    } while ((n /= 10) > 0);     /* eliminala */
+    if (sign < 0)
+        s[i++] = '-';
+    while (i < p) {
+        s[i++] = ' ';  // Aggiungo uno spazio singolo (apice singolo!)
+    }
+    s[i] = '\0';
+    reverse(s);
+}
 
 void reverse(char s[])
 {
