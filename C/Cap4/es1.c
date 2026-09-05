@@ -1,6 +1,9 @@
 /*
 Esempio molto primitivo di comunicazione tra tre file.c con variabili
 var extern che si dovrebbero ripetere troppo spesso--> sol funzionante ma ripetitiva
+ricorda la differenza tra definire e dichiarare con extern: con la prima intendiamo
+creare un posto in RAM per le variabili, la seconda dice di usare il nome della stessa
+variabile previa "extern" per dire "hey fidati esiste già una variabile chiamata così in un altro file"
 */
 #include <stdio.h>
 
