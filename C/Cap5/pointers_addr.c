@@ -11,6 +11,23 @@ Si rappresenta ciò con p=&c;
 
 void swap(int, int);
 void swapnew(int*, int*);
+int CalcolaDannoPuntatori(int*);
+
+int CalcolaDannoPuntatori(int *danno_inflitto){
+    int roll = GeneraNumeroCasuale(1, 100); // Tiri un dado da 1 a 100
+    
+    if (roll > 90) { 
+        *danno_inflitto = 100; // Colpo Critico! Lo salvo a distanza.
+        return 1;              // Segnalo lo STATO di critico
+    } else {
+        *danno_inflitto = 20;  // Colpo normale. Lo salvo a distanza.
+        return 0;              // Segnalo lo STATO normale
+    } 
+}
+
+/*
+questo è un esempio di funzione che deve restituire due cose: sia il danno e seganalare lo stato di danno critico o no
+*/
 
 
 void swapnew(int *px, int *py){ //questo invece punta direttamente alle var nel main e poi muiono i puntatori come arg della funzione
@@ -53,5 +70,8 @@ int main(){
 
     swapnew(px,py);
     printf("%d,%d\n", *px,*py);
+
+    int danno_da_applicare = 0;
+    int e_critico = CalcolaDannoPuntatori(&danno_da_applicare);
 
 }
