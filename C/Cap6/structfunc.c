@@ -40,7 +40,7 @@ typedef struct{
     //altri vari KB di roba
 }Boss;
 
-void cura_boss(Boss *b){ //puntiamo all'indirizzo dell astruct anzichè fare una fotocopia-->+ efficiente
+void cura_boss(Boss *b){ //puntiamo all'indirizzo della struct anzichè fare una fotocopia-->+ efficiente
     b->hp+=100;
 }
 
