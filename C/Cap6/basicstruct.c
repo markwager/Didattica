@@ -4,6 +4,7 @@ struct point{
     int x; //membro
     int y; //membro
 };
+//le struct non possono essere confrontate tra loro, ma i loro membri sì
 
 /*
 questa è una struttura: elenco di dichiarazioni
